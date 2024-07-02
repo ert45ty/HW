@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      #body {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        margin: auto;
+      }
+      .btn {
+        width: 30%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        text-align: center;
+      }
+      #inputMission {
+        width: 80%;
+        padding: 15px;
+        border-radius: 5px;
+      }
+      #btnAdd {
+        padding: 10px 30px;
+        background-color: cornflowerblue;
+        color: aliceblue;
+        border: none;
+        border-radius: 5px;
+      }
+      #addMission {
+        margin: 15px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .checkbox {
+        margin-left: 0px;
+      }
+      .checkbox-checked {
+        margin-left: 0px;
+      }
+      #completed {
+        width: 85%;
+      }
+      #task-done {
+        display: flex;
+        justify-content: space-between;
+      }
+      #btn-delete {
+        justify-content: end;
+      }
+      #delete-all {
+        width: 85%;
+        display: flex;
+        justify-content: end;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <h1 style="text-align: center">#todo</h1>
+      <div id="btns" style="border-bottom: 1px solid gray; margin-bottom: 10px">
+        <button class="btn" id="btn-all">All</button>
+        <button class="btn" id="btn-active">Active</button>
+        <button class="btn" id="btn-completed">Completed</button>
+      </div>
+      <div id="all">
+        <div id="active">
+          <div id="addMission">
+            <input id="inputMission" type="text" placeholder="add details" />
+            <button id="btnAdd">Add</button>
+          </div>
+          <div id="table-mission">
+            <div class="aMission">
+              <input class="checkbox" type="checkbox" />
+              <span class="mission">Do coding challenges</span>
+            </div>
+            <div class="aMission">
+              <input class="checkbox" type="checkbox" />
+              <span class="mission">Do coding challenges</span>
+            </div>
+          </div>
+        </div>
+        <div id="completed">
+          <div id="task-done" class="task-done">
+            <div id="task">
+              <input class="checkbox-checked" type="checkbox" checked />
+              <span class="mission-strike"><strike>Task done</strike></span>
+            </div>
+            <div id="btn-delete" class="btn-delete">
+              <button
+                id="btnDelete"
+                class="btnDelete"
+                style="border: none; background-color: white"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="delete-all" class="delete-all">
+          <button
+            id="btn-delete-all"
+            style="padding: 10px 20px; background-color: red; color: white"
+          >
+            <i class="fa-solid fa-trash"></i> delete all
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="bai1.js"></script>
+  </body>
+</html>
